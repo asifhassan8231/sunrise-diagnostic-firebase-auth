@@ -1,0 +1,65 @@
+[
+    {
+        "drugId": 3431,
+        "title": "Paracetamol",
+        "brand": "Square",
+        "name": "Paracip-650",
+        "price": 45
+    },
+    {
+        "drugId": 2322,
+        "title": "Finix",
+        "brand": "Drug House",
+        "name": "AspirinDioxy-50",
+        "price": 67
+    },
+    {
+        "drugId": 2333,
+        "title": "Tylenol",
+        "brand": "Incepta",
+        "name": "Acelaminophen-50",
+        "price": 35
+    },
+    {
+        "drugId": 6742,
+        "title": "Napa Extra",
+        "brand": "Square",
+        "name": "Paramithanol-550",
+        "price": 10
+    },
+    {
+        "drugId": 7857,
+        "title": "Geston",
+        "brand": "Acme Lab.",
+        "name": "Thyroxymetaphin-40",
+        "price": 97
+    },
+    {
+        "drugId": 7879,
+        "title": "Flexivan ER",
+        "brand": "Reneta ltd.",
+        "name": "AccumulateDioxy-100",
+        "price": 78
+    },
+    {
+        "drugId": 8912,
+        "title": "Paracetamol",
+        "brand": "Square",
+        "name": "Paracip-650",
+        "price": 45
+    },
+    {
+        "drugId": 9071,
+        "title": "Rizonib",
+        "brand": "Sanofi Int.",
+        "name": "Zyrocloramine-50",
+        "price": 112
+    },
+    {
+        "drugId": 9083,
+        "title": "Camlotel",
+        "brand": "Acme Lab.",
+        "name": "Paraoxyhydro-42",
+        "price": 67
+    }
+]

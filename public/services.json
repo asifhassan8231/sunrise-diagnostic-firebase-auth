@@ -1,0 +1,38 @@
+[
+    {
+        "serviceId": 1,
+        "title": "Blood Test",
+        "image": "https://i.ibb.co/0fgqcYQ/Getty-Images-482186651-450229ae311e422db9bf1bdd0169a163-1.jpg ",
+        "description": "Regular blood testing is one of the most important ways to keep track of your overall physical well-being. Getting tested at routine intervals can allow you to see the way your body changes over time and empower you to make informed decisions about your health."
+    },
+    {
+        "serviceId": 2,
+        "title": "X-Ray",
+        "image": "https://i.ibb.co/xj55SFW/chest-x-ray-1.jpg",
+        "description": "An X-ray is a quick painless test that produces images of the structures inside your body particularly your bones. X-ray beams pass through your body and they are absorbed in different amounts depending on the density of the material they pass through."
+    },
+    {
+        "serviceId": 3,
+        "title": "Ultrasonography",
+        "image": "https://i.ibb.co/0JscxY7/CRL-Crown-rump-length-12-weeks-ecografia-Dr-Wolfgang-Moroder-1.jpg",
+        "description": "Medical ultrasound includes diagnostic imaging techniques as well as therapeutic applications of ultrasound. In diagnosis it is used to create an image of internal body structures such as tendons muscles joints blood vessels, and internal organs."
+    },
+    {
+        "serviceId": 4,
+        "title": "Ecg Test",
+        "image": "https://i.ibb.co/tpHST88/5fa8d7331fccd00001455b87-1.jpg",
+        "description": "An Ecg test is a cardiological test that measures the heart's ability to respond to external stress in a controlled clinical environment. The stress response is induced by exercise or by intravenous pharmacological stimulation."
+    },
+    {
+        "serviceId": 5,
+        "title": "Diabetes Test",
+        "image": "https://i.ibb.co/w7jTpJJ/69477385-1.jpg",
+        "description": "If you experience symptoms of severe increased thirst frequent urination unexplained weight loss increased hunger tingling of your hands or feet doctor may run a test for diabetes.Fasting plasma glucose test is the preferred method for diagnosing diabetes"
+    },
+    {
+        "serviceId": 6,
+        "title": "Hormone Test",
+        "image": "https://i.ibb.co/nCtYsDy/dutch-complete-hormone-test-1.jpg",
+        "description": "We use hormone testing to detect and evaluate hormone imbalances that may be making you sick. We often conduct hormone testing using a blood sample but some tests require urine or saliva samples. We frequently test levels of: Estrogen and testosterone."
+    }
+]

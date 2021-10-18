@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "image": "https://thumbs.dreamstime.com/b/portrait-indian-doctor-portrait-male-indian-doctor-serious-expression-crossed-arms-wearing-white-coat-having-open-137577527.jpg",
+        "name": "Dr. Abdul Motalib",
+        "category": "Medicine",
+        "speciality": "PhD in Medicine, Gold Medal Awarded(India)",
+        "days": "Sat-Thu",
+        "time": "4pm-11pm"
+    },
+    {
+        "id": 2,
+        "image": "https://thumbs.dreamstime.com/b/confident-young-adult-indian-female-doctor-gp-wear-white-coat-stethoscope-looking-camera-standing-arms-crossed-medical-191740547.jpg",
+        "name": "Dr. Afroza Sultana",
+        "category": "Gynecology",
+        "speciality": "Bsc and PhD in Gynecology, Bcs Health, DMC",
+        "days": "Mon-Thu",
+        "time": "3pm-9pm"
+    },
+    {
+        "id": 3,
+        "image": "https://thumbs.dreamstime.com/b/portrait-happy-young-handsome-indian-man-doctor-smiling-studio-shot-against-white-background-137823661.jpg",
+        "name": "Dr. Zaman Bhuiyan",
+        "category": "Mental Health",
+        "speciality": "Researcher at Bangladesh Mental Health Association, President Gold Medal(2019)",
+        "days": "Thu-Sat",
+        "time": "5pm-11pm"
+    }
+]
