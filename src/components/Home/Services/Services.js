@@ -6,12 +6,14 @@ import Service from '../../Service/Service';
 const Services = () => {
     const { services } = useServices();
     return (
-        <div>
-            <h3>Total Services: {services?.length}</h3>
-            <div>
-                {
-                    services.map(srvs => <Service key={srvs.serviceId} service={srvs}></Service>)
-                }
+        <div style={{ backgroundColor: '#88FFF7' }}>
+            <div className="container py-5">
+                <h2 className="fst-italic fw-light">Our Services</h2>
+                <div className="row">
+                    {
+                        services.map(srvs => <Service key={srvs.serviceId} service={srvs}></Service>)
+                    }
+                </div>
             </div>
         </div>
     );

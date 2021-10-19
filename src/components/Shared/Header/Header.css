@@ -1,0 +1,13 @@
+.navigation a{
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    padding: 5px;
+    font-weight: 600;
+}
+.navigation a:hover{
+    background-color:#88FFF7;
+    color: black;
+    border-radius: 5px;
+   
+}
