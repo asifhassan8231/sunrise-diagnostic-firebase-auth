@@ -1,8 +1,21 @@
-# Getting Started with Create React App
+# Sunrise Diagnostic Laboratory (Ltd.)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Project is [here](https://sunrise-diagnostic-lab.web.app/).
 
-## Available Scripts
+## About the project
+- This project is about diagnostic service of a laboratory where people can book their medical test.
+- User can also get appoinment of the popular doctors from here
+- There is also an online pharmacy section with home delivery 
+- In this project, there is a map of the laboratory to help people find it easily
+- Reviews of satisfied customers are also added
+
+
+
+
+
+
+
+
 
 In the project directory, you can run:
 

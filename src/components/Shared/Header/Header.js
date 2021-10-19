@@ -23,7 +23,7 @@ const Header = () => {
                             {!user && <Link to="/login">Login</Link>}
                             {!user && <Link to="/register">Register</Link>}
                             {user && <button onClick={googleSignOut} className="btn btn-info">Logout</button>}
-                            {user && <span className="d-flex align-items-center mx-2">{element}{user.displayName}</span>}
+                            {user && <span className="d-flex align-items-center mx-2">{element}  {user.displayName}</span>}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

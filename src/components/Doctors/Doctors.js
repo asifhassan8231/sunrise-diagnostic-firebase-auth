@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Doctors = () => {
     const [doctors, setDoctors] = useState([]);
@@ -10,21 +12,21 @@ const Doctors = () => {
             .then(data => setDoctors(data))
     }, [])
     if (!doctors) {
-        return <h2>Loading...</h2>
+        return <Spinner animation="grow" />;
     }
     return (
-        <div>
-            <h2>doctors here</h2>
-            <div>
+        <div className="container">
+            <h2>Doctors here</h2>
+            <div className="row">
                 {
                     doctors?.map(doc => (
-                        <div key={doc.id}>
-                            <img src={doc.image} alt="" />
+                        <div key={doc.id} className="col-12 py-2 border rounded">
+                            <img src={doc.image} className="img-fluid" alt="" />
                             <h2>{doc.name}</h2>
                             <h3>{doc.category}</h3>
                             <h4>{doc.speciality}</h4>
                             <p><span>{doc.days}</span><span>({doc.time})</span></p>
-                            <button>Get Appoinment</button>
+                            <Link to="/confirmation"><button className="btn btn-info">Get Appoinment</button></Link>
                         </div>
                     ))
                 }

@@ -2,8 +2,8 @@ import React from 'react'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
-    width: '400px',
-    height: '400px'
+    width: '300px',
+    height: '300px'
 };
 
 const position = {
@@ -28,21 +28,23 @@ function Location() {
                         <h3>Dhaka-1217, Bangladesh.</h3>
                     </div>
                     <div className="col-12 col-md-6">
-                        <LoadScript
-                            googleMapsApiKey="AIzaSyA-8wj4YLpTGyT6qWWsEeFCczUOz3tqw_Q"
-                        >
-                            <GoogleMap
-                                mapContainerStyle={containerStyle}
-                                center={position}
-                                zoom={15}
+                        <div className="container">
+                            <LoadScript
+                                googleMapsApiKey="AIzaSyA-8wj4YLpTGyT6qWWsEeFCczUOz3tqw_Q"
                             >
-                                <Marker
-                                    onLoad={onLoad}
-                                    position={position}
-                                />
-                                <></>
-                            </GoogleMap>
-                        </LoadScript>
+                                <GoogleMap
+                                    mapContainerStyle={containerStyle}
+                                    center={position}
+                                    zoom={15}
+                                >
+                                    <Marker
+                                        onLoad={onLoad}
+                                        position={position}
+                                    />
+                                    <></>
+                                </GoogleMap>
+                            </LoadScript>
+                        </div>
                     </div>
                 </div>
             </div>

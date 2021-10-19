@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
@@ -9,9 +10,10 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [newError, setNewError] = useState('');
+    const history = useHistory();
     const { googleSignIn, isLoading, error, createUser } = useAuth();
     if (isLoading) {
-        return <h2>Loading...</h2>
+        return <Spinner animation="grow" />;
     }
 
     const handleGoogleSignIn = () => {
@@ -56,30 +58,37 @@ const Register = () => {
         const name = firstName + ' ' + secondName;
         const userObj = { name, email, password };
         createUser(userObj);
+        history.push('/home');
     }
 
     return (
-        <div>
-            <h2>register</h2>
-            <h4>{error}</h4>
-            <button onClick={handleGoogleSignIn}>Continue With Google</button>
-            <p>--------or-------</p>
-            <p>Continue With Email</p>
-            <form onSubmit={handleRegister}>
-                <input type="text" placeholder="First Name" onBlur={handleFirstName} />
-                <input type="text" placeholder="Last Name" onBlur={handleSecondName} />
-                <br />
-                <input type="text" placeholder="Your Email" onBlur={handleEmail} />
-                <br />
-                <input type="password" placeholder="Password" onBlur={handlePassword} />
-                <br />
-                <input type="password" placeholder="Confirm Password" onBlur={handleConfirmPassword} />
-                <br />
-                <input type="submit" value="Register" />
-            </form>
-            <p>{newError}</p>
-            <p>Already an user?</p>
-            <Link to="/login">Log in to your account</Link>
+        <div className="container">
+            <div className="d-flex justify-content-center py-3">
+                <div className=" border border-primary border-3 p-2 rounded d-flex flex-column align-items-center" style={{ backgroundColor: "#7C83FD" }}>
+                    <h2 className="fst-italic fw-light">Register</h2>
+                    <h4>{error}</h4>
+                    <button className="btn btn-info" onClick={handleGoogleSignIn}>Continue With Google</button>
+                    <p>--------or-------</p>
+                    <p>Continue With Email</p>
+                    <form onSubmit={handleRegister}>
+                        <div className="d-flex mb-3">
+                            <input type="text" placeholder="First Name" className="form-control" onBlur={handleFirstName} />
+                            <input type="text" placeholder="Last Name" className="form-control" onBlur={handleSecondName} />
+                            <br />
+                        </div>
+                        <input type="text" placeholder="Your Email" className="form-control" onBlur={handleEmail} />
+                        <br />
+                        <input type="password" placeholder="Password" className="form-control" onBlur={handlePassword} />
+                        <br />
+                        <input type="password" placeholder="Confirm Password" className="form-control" onBlur={handleConfirmPassword} />
+                        <br />
+                        <input type="submit" value="Register" style={{ backgroundColor: "#88FFF7", padding: "5px", borderRadius: "5px", fontWeight: "600" }} />
+                    </form>
+                    <p>{newError}</p>
+                    <p>Already an user?</p>
+                    <Link to="/login" className="text-light">Log in to your account</Link>
+                </div>
+            </div>
         </div>
     );
 };

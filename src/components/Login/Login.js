@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 
@@ -13,7 +14,7 @@ const Login = () => {
     const { googleSignIn, isLoading, error, signInWithEmail } = useAuth();
 
     if (isLoading) {
-        return <h2>Loading...</h2>
+        return <Spinner animation="grow" />;
     }
 
     const handleGoogleSignIn = () => {
@@ -44,24 +45,29 @@ const Login = () => {
 
         const userObj = { email, password };
         signInWithEmail(userObj);
+        history.push('/home');
     }
     return (
-        <div>
-            <h2>login</h2>
-            <h4>{error}</h4>
-            <button onClick={handleGoogleSignIn}>Continue with Google</button>
-            <p>--------or-------</p>
-            <p>Continue With Email</p>
-            <form onSubmit={handleLogin}>
-                <input type="text" placeholder="Your Email" onBlur={handleEmail} />
-                <br />
-                <input type="password" placeholder="Password" onBlur={handlePassword} />
-                <br />
-                <input type="submit" value="Login" />
-            </form>
-            <p>{newError}</p>
-            <p>New in the website?</p>
-            <Link to="/register">Create an account</Link>
+        <div className="container">
+            <div className="d-flex justify-content-center py-3">
+                <div className=" border border-primary border-3 p-2 rounded d-flex flex-column align-items-center" style={{ backgroundColor: "#7C83FD" }}>
+                    <h2 className="fst-italic fw-light">Login</h2>
+                    <h4>{error}</h4>
+                    <button className="btn btn-info" onClick={handleGoogleSignIn}>Continue With Google</button>
+                    <p>--------or-------</p>
+                    <p>Continue With Email</p>
+                    <form onSubmit={handleLogin}>
+                        <input type="text" placeholder="Your Email" className="form-control" onBlur={handleEmail} />
+                        <br />
+                        <input type="password" placeholder="Password" className="form-control" onBlur={handlePassword} />
+                        <br />
+                        <input type="submit" value="Login" style={{ backgroundColor: "#88FFF7", padding: "5px", borderRadius: "5px", fontWeight: "600" }} />
+                    </form>
+                    <p>{newError}</p>
+                    <p>New in the website?</p>
+                    <Link to="/register" className="text-light">Create an account</Link>
+                </div>
+            </div>
         </div>
     );
 };

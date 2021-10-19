@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Confirmation = () => {
     return (
-        <div>
+        <div className="container">
             <h2>Confirmation</h2>
-            <Link to="/home">Go back to home...</Link>
+            <h4>Thanks for being with us. We hope your good health and well being.</h4>
+            <Link to="/home">Return to home...</Link>
         </div>
     );
 };

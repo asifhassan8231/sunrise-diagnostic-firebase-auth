@@ -13,6 +13,7 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 updateName(name);
+                window.history.go(0);
             })
             .catch(error => {
                 setError(error.message);
@@ -38,7 +39,7 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-                window.history.back();
+                window.history.go(0);
             })
             .catch(error => {
                 setError(error.message);
