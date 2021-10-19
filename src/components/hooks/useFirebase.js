@@ -8,7 +8,6 @@ const useFirebase = () => {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const auth = getAuth();
-
     const createUser = ({ name, email, password }) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
@@ -39,7 +38,7 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-
+                window.history.back();
             })
             .catch(error => {
                 setError(error.message);

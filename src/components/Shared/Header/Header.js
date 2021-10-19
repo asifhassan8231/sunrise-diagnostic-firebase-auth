@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
     const { user, googleSignOut } = useAuth();
-    console.log(user);
+    const element = <FontAwesomeIcon icon={faUser} />;
     return (
         <div>
             <Link to="/home">Home</Link>
@@ -13,7 +15,7 @@ const Header = () => {
             {!user && <Link to="/Login">Login</Link>}
             {!user && <Link to="/Register">Register</Link>}
             {user && <button onClick={googleSignOut}>Logout</button>}
-            {user && <span>{user.displayName}</span>}
+            {user && <span>{element}{user.displayName}</span>}
         </div>
     );
 };
