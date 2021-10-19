@@ -37,10 +37,11 @@ const Pharmacy = () => {
                         <div>
                             <h4>Location</h4>
                             <p>Set your location please...</p>
+                            <a href="#location">location</a>
                         </div>
                         <div>
                             {
-                                <div>
+                                <div className="py-2">
                                     <h3>Cart</h3>
                                     <p>Price: {(price).toFixed(2)} Tk.</p>
                                     <p>Tax: {(price * 0.05).toFixed(2)} Tk.</p>

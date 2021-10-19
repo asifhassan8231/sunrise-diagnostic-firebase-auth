@@ -19,7 +19,7 @@ const Register = () => {
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
-                console.log(result.user);
+                history.push('/home');
             })
     }
 
